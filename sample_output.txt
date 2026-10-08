@@ -1,0 +1,36 @@
+ 
+=== Opening balances ===
+[S-1001] 1000.00
+[C-2001] 300.00
+[S-1002] 500.00
+[C-2002] 1000.00
+
+=== Invalid deposit ===
+Deposit rejected: amount must be positive.
+
+=== Round 1: withdraw 700 from every account ===
+Savings withdrawal rejected: minimum balance of $200.0 must be maintained.
+[C-2001] CURRENT withdrew 700.00. New balance: -400.00 (in overdraft)
+Savings withdrawal rejected: minimum balance of $100.0 must be maintained.
+[C-2002] CURRENT withdrew 700.00. New balance: 300.00
+
+=== Round 2: withdraw 150 from every account ===
+Savings withdrawal rejected: minimum balance of $200.0 must be maintained.
+[C-2001] CURRENT withdrawal of 150.00 REJECTED: would exceed overdraft limit of 500.00.
+Savings withdrawal rejected: minimum balance of $100.0 must be maintained.
+[C-2002] CURRENT withdrew 150.00. New balance: 150.00
+
+=== End of month ===
+Savings interest added: $0.0
+Savings balance after month-end: $0.0
+[C-2001] CURRENT month-end: maintenance fee of 5.00 deducted. New balance: -405.00
+Savings interest added: $0.0
+Savings balance after month-end: $0.0
+[C-2002] CURRENT month-end: maintenance fee of 5.00 deducted. New balance: 145.00
+
+=== Closing balances ===
+[S-1001] 1000.00
+[C-2001] -405.00
+[S-1002] 500.00
+[C-2002] 145.00
+User program finished
